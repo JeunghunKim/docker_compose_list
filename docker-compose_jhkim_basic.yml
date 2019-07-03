@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  tf-bash:
+    image: jhkim/basic
+    volumes:
+        - /home/jhkim/Project:/root/Project
+        - /home/jhkim/DB:/root/DB
+    environment:
+        - SHELL=/bin/bash
+        - TERM=xterm-256color
+        - PATH="$PATH:/usr/games"
+    command: /bin/bash
